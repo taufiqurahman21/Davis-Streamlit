@@ -18,7 +18,7 @@ plt.ylabel('Tip')
 st.pyplot(plt)
 
 # Line Plot
-st.write("Line Plot")
+plt.title("Line Plot")
 fig, ax = plt.subplots(figsize=(10, 6))
 line_plot = sns.lineplot(data=data.drop(['total_bill'], axis=1), ax=ax)
 st.pyplot(fig)
