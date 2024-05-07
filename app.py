@@ -7,7 +7,8 @@ import seaborn as sns
 data = pd.read_csv("tips.csv")
 
 # Menampilkan Teks 
-st.write("Muhammad Asyam Thoriq Taufiqurahman || 21082010155")
+st.subheader("Muhammad Asyam Thoriq Taufiqurahman")
+st.subheader("21082010155")
 
 # Scatter plot
 plt.scatter(data['day'], data['tip'])
