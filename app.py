@@ -5,18 +5,18 @@ import streamlit as st
 # Membaca database
 data = pd.read_csv("tips.csv")
 
-# Menampilkan judul di halaman web
-st.title('Scatter Plot')
+# Menampilkan Teks 
+st.write("Muhammad Asyam Thoriq Taufiqurahman || 21082010155")
 
-# Scatter plot dengan day melawan tip
+# Scatter plot
 plt.scatter(data['day'], data['tip'])
-
-# Menambahkan Judul Plot
 plt.title("Scatter Plot")
-
-# Mengatur label X dan Y
 plt.xlabel('Day')
 plt.ylabel('Tip')
-
-# Menampilkan plot menggunakan Streamlit
 st.pyplot(plt)
+
+# Line Plot
+st.write("Line Plot")
+fig, ax = plt.subplots(figsize=(10, 6))
+line_plot = sns.lineplot(data=data.drop(['total_bill'], axis=1), ax=ax)
+st.pyplot(fig)
